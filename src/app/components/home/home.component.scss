@@ -6,17 +6,41 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-evenly;
-}
 
-.glass {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    .glass {
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(41x);
+        -webkit-backdrop-filter: blur(1px);
+        // border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: var(--color-white);
+        text-align: center;
+        height: 50px;
+        background-color: var(--color-primary);
+    }
+
+    .content {
+        position: relative;
+        top: 50px;
+        height: calc(100vh - 120px);
+    }
+
+    .footer {
+        position: fixed;
+        height: 70px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+        text-align: center;
+    }
 }
