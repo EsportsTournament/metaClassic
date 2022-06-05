@@ -25,14 +25,13 @@
         width: 100%;
         color: var(--color-white);
         text-align: center;
-        height: 50px;
         background-color: var(--color-primary);
     }
 
     .content {
         position: relative;
         top: 50px;
-        height: calc(100vh - 120px);
+        height: calc(100vh - 100px);
     }
 
     .footer {

@@ -18,7 +18,7 @@ export class AuthService {
     try {
       const result = await this.afAuth
         .signInWithPopup(provider);
-      console.log('You have been successfully logged in!', result);
+        sessionStorage.setItem('user', JSON.stringify(result));
     } catch (error) {
       console.log(error);
     }

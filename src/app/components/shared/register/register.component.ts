@@ -8,13 +8,20 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class RegisterComponent {
 
+  signInText = 'Sign In';
+  currentUser: any;
+
   constructor(public authService: AuthService) { }
 
-  signIn() {
-    this.authService.GoogleAuth().then( user => {
+  async signIn() {
+    await this.authService.GoogleAuth();
+    this.signInText = 'Sign Out';
+    let user = sessionStorage.getItem('user');
+    if(user) { 
+      this.currentUser = JSON.parse(user);
       console.log(user);
-      
-    })
+      this.signInText = this.currentUser.additionalUserInfo.profile.given_name;
+    }
   }
 
 }

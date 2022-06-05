@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    align-items: center;
+
+    .logo {
+        width: 32px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        -webkit-text-stroke-width: 1px;
+        letter-spacing: 1px;
+        -webkit-text-stroke-color: var(--color-complementary);
+        color: var(--color-white);
+        text-shadow: 2px 2px var(--color-secondary);
+    }
+}
