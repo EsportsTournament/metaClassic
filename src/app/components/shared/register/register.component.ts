@@ -1,3 +1,4 @@
+import { GoogleLoginProvider, SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
-  constructor() { }
+  constructor(private authService: SocialAuthService) { }
 
-  ngOnInit(): void {
+  signInWithGoogle(): void {
+    console.log('trying');
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then((user) => {
+      console.log(user);
+    });
+  }
+
+  signOut(): void {
+    this.authService.signOut();
   }
 
 }
