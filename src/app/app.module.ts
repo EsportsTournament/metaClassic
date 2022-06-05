@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenubarComponent } from './components/home/menubar/menubar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { TournamentsComponent } from './components/home/tournaments/tournaments.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,10 @@ import { TournamentsComponent } from './components/home/tournaments/tournaments.
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
