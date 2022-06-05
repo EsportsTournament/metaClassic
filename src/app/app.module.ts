@@ -9,13 +9,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenubarComponent } from './components/home/menubar/menubar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { TournamentsComponent } from './components/home/tournaments/tournaments.component';
-import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from '@abacritt/angularx-social-login';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { ProfileComponent } from './components/home/menubar/profile/profile.component';
 import { AboutUsComponent } from './components/home/menubar/about-us/about-us.component';
 import { CreateTournamentComponent } from './components/home/menubar/create-tournament/create-tournament.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CreateTournamentComponent } from './components/home/menubar/create-tour
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
     SocialLoginModule,
@@ -58,7 +60,9 @@ import { CreateTournamentComponent } from './components/home/menubar/create-tour
         }
       } as SocialAuthServiceConfig,
     }
+    BrowserAnimationsModule,
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
