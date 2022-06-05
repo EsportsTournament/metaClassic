@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class RegisterComponent {
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
+
+  signIn() {
+    this.authService.GoogleAuth().then( user => {
+      console.log(user);
+      
+    })
+  }
 
 }

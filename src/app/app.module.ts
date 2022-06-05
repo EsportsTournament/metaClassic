@@ -14,7 +14,15 @@ import {MatButtonModule} from '@angular/material/button';
 import { ProfileComponent } from './components/home/menubar/profile/profile.component';
 import { AboutUsComponent } from './components/home/menubar/about-us/about-us.component';
 import { CreateTournamentComponent } from './components/home/menubar/create-tournament/create-tournament.component';
-import { AppMaterialModule } from './app-material.module'
+import { AppMaterialModule } from './app-material.module';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 
 @NgModule({
   declarations: [
@@ -32,14 +40,20 @@ import { AppMaterialModule } from './app-material.module'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
