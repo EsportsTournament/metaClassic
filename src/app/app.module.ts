@@ -9,7 +9,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenubarComponent } from './components/home/menubar/menubar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { TournamentsComponent } from './components/home/tournaments/tournaments.component';
-import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -26,27 +25,8 @@ import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from 
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SocialLoginModule
   ],
-  providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '866040500810-nibv1hvva18cqnj8iuao8besp620ko71.apps.googleusercontent.com'
-            )
-          },
-        ],
-        onError: (err) => {
-          console.error('err from module:- ',err);
-        }
-      } as SocialAuthServiceConfig,
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
