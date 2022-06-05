@@ -2,9 +2,15 @@
     // background-color: blue;
 }
 
-.mat-toolbar{
+.mat-toolbar {
     position: absolute;
     bottom: 0;
     justify-content: space-evenly;
     height: -webkit-fill-available;
+    flex-wrap: nowrap;
+}
+
+.mat-button {
+    white-space: normal;
+    line-height: 22px;
 }

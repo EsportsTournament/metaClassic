@@ -14,7 +14,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { ProfileComponent } from './components/home/menubar/profile/profile.component';
 import { AboutUsComponent } from './components/home/menubar/about-us/about-us.component';
 import { CreateTournamentComponent } from './components/home/menubar/create-tournament/create-tournament.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module'
 
 @NgModule({
