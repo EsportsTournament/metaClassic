@@ -10,7 +10,13 @@ import { MenubarComponent } from './components/home/menubar/menubar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { TournamentsComponent } from './components/home/tournaments/tournaments.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from './app-material.module';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import { ProfileComponent } from './components/home/menubar/profile/profile.component';
+import { AboutUsComponent } from './components/home/menubar/about-us/about-us.component';
+import { CreateTournamentComponent } from './components/home/menubar/create-tournament/create-tournament.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module'
 
 @NgModule({
   declarations: [
@@ -21,6 +27,9 @@ import { AppMaterialModule } from './app-material.module';
     MenubarComponent,
     HeaderComponent,
     TournamentsComponent,
+    ProfileComponent,
+    AboutUsComponent,
+    CreateTournamentComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +37,29 @@ import { AppMaterialModule } from './app-material.module';
     AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    SocialLoginModule,
+    MatToolbarModule,
+    MatButtonModule,
+    BrowserAnimationsModule
+  ],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '866040500810-nibv1hvva18cqnj8iuao8besp620ko71.apps.googleusercontent.com'
+            )
+          },
+        ],
+        onError: (err) => {
+          console.error('err from module:- ',err);
+        }
+      } as SocialAuthServiceConfig,
+    }
     BrowserAnimationsModule,
   ],
   providers: [],
