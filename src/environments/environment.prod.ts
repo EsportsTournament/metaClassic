@@ -8,5 +8,7 @@ export const environment = {
     messagingSenderId: '888992868623',
     measurementId: 'G-ZKZBS9NPLZ',
   },
-  production: true
+  production: true,
+  appName: 'Meta Esports',
+  backendUrl: 'https://meta-classic-api.vercel.app/'
 };

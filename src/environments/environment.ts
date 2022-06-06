@@ -12,7 +12,9 @@ export const environment = {
     messagingSenderId: '888992868623',
     measurementId: 'G-ZKZBS9NPLZ',
   },
-  production: false
+  production: false,
+  appName: 'Meta Esports',
+  backendUrl: 'http://localhost:8890/'
 };
 
 /*
