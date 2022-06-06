@@ -14,13 +14,13 @@ export class RegisterComponent {
   constructor(public authService: AuthService) { }
 
   async signIn() {
-    await this.authService.GoogleAuth();
-    this.signInText = 'Sign Out';
-    let user = sessionStorage.getItem('user');
-    if(user) { 
-      this.currentUser = JSON.parse(user);
-      this.signInText = this.currentUser.fullName;
-    }
+    await this.authService.GoogleAuth().then( () => {
+      let user = sessionStorage.getItem('user');
+      if(user) { 
+        this.currentUser = JSON.parse(user);
+        this.signInText = this.currentUser.fullName;
+      }
+    });
   }
 
 }
