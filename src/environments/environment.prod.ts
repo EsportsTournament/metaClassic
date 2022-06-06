@@ -10,5 +10,5 @@ export const environment = {
   },
   production: true,
   appName: 'Meta Esports',
-  backendUrl: 'https://meta-classic-api.vercel.app/'
+  backendUrl: 'https://mysterious-beyond-28283.herokuapp.com/'
 };
