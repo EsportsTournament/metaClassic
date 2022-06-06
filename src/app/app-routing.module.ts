@@ -8,8 +8,7 @@ import { ProfileComponent } from './components/home/menubar/profile/profile.comp
 import { TournamentsComponent } from './components/home/tournaments/tournaments.component';
 
 const routes: Routes = [
-  { path: '', component: RegisterComponent},
-  {path: 'home', component: HomeComponent},
+  { path: '', component: HomeComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'tournament', component: TournamentsComponent},
   { path: 'createTournament', component: CreateTournamentComponent},
