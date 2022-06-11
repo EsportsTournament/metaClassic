@@ -1,6 +1,36 @@
-<mat-toolbar class="navbar">
-  <a mat-button routerLink="profile">Profile</a>
-  <a mat-button routerLink="tournament">Tournament</a>
-  <a mat-button routerLink="createTournament">Create Tournament</a>
-  <a mat-button routerLink="aboutUs">About US</a>
-</mat-toolbar>
+<mat-toolbar class="glass">
+  <div class="navbar">
+    <div class="nav-button glass" mat-button routerLink="profile">
+      <mat-icon class="nav-icon" aria-hidden="false" aria-label="Profile icon">
+        person
+      </mat-icon>
+      <div class="nav-text">
+        Profile
+      </div>
+    </div>
+    <div class="nav-button glass" mat-button routerLink="tournament">
+      <mat-icon class="nav-icon" aria-hidden="false" aria-label="Profile icon">
+        edit_off
+      </mat-icon>
+      <div class="nav-text">
+        Tournament
+      </div>
+    </div>
+    <div class="nav-button glass" mat-button routerLink="createTournament">
+      <mat-icon class="nav-icon" aria-hidden="false" aria-label="Profile icon">
+        add_circle
+      </mat-icon>
+      <div class="nav-text">
+        Create
+      </div>
+    </div>
+    <div class="nav-button glass" mat-button routerLink="aboutUs">
+      <mat-icon class="nav-icon" aria-hidden="false" aria-label="Profile icon">
+        contact_emergency
+      </mat-icon>
+      <div class="nav-text">
+        About Us
+      </div>
+    </div>
+  </div>
+  </mat-toolbar>

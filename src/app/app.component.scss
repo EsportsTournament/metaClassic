@@ -1,22 +1,12 @@
 .container {
     background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/218.jpg');
-    /* Full height */
     height: 100vh;
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-     padding-right: 0;
-     padding-left: 0;
-    .glass {
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(41x);
-        -webkit-backdrop-filter: blur(1px);
-        // border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-    }
+    padding-right: 0;
+    padding-left: 0;
 
     .header {
         position: fixed;
@@ -28,20 +18,11 @@
         background-color: var(--color-primary);
     }
 
-    .content {
-        position: relative;
-        top: 50px;
-        height: calc(100vh - 100px);
-    }
-
     .footer {
         position: fixed;
-        height: 70px;
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: var(--color-secondary);
-        color: var(--color-white);
         text-align: center;
     }
 }
