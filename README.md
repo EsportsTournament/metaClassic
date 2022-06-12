@@ -1,6 +1,6 @@
 # MetaClassic
 
-Live here [Meta Esports](metclan.xyz) 
+Live here [Meta Esports](https://metclan.xyz) 
 
 Figma Design updates are [here](https://www.figma.com/proto/Pk6k2oBrg4KqYhI7pkA3p9/Meta-Esports?node-id=0%3A3&scaling=scale-down&page-id=0%3A1)
 
