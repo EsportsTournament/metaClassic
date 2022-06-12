@@ -9,19 +9,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenubarComponent } from './components/home/menubar/menubar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { TournamentsComponent } from './components/home/tournaments/tournaments.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 import { ProfileComponent } from './components/home/menubar/profile/profile.component';
 import { AboutUsComponent } from './components/home/menubar/about-us/about-us.component';
 import { CreateTournamentComponent } from './components/home/menubar/create-tournament/create-tournament.component';
 import { AppMaterialModule } from './app-material.module';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { HttpClientModule } from '@angular/common/http';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AuthorisationInterceptor } from './services/authorisation.interceptor';
 
 
 @NgModule({
@@ -52,7 +53,12 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AngularFireAuthModule,
   ],
   providers: [
-    AuthService
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,  
+      useClass: AuthorisationInterceptor,  
+      multi: true  
+    }
   ],
   bootstrap: [AppComponent]
 })
