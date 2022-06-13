@@ -18,6 +18,12 @@
         background-color: var(--color-primary);
     }
 
+    .content {
+        position: relative;
+        top: 50px;
+        height: calc(100vh - 120px);
+    }
+
     .footer {
         position: fixed;
         left: 0;
