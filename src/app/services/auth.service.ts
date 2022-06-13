@@ -17,7 +17,7 @@ export class AuthService {
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new GoogleAuthProvider());
-  }
+  }  
   // Auth logic to run auth providers
   async AuthLogin(provider: firebase.auth.AuthProvider) {
     try {
